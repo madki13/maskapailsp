@@ -47,7 +47,7 @@ class PenerbanganController extends Controller
         $penerbangan = Penerbangan::create([
             'name' => $request->name,
             'price' => $request->price,
-            'image' => $request->image,
+            'image' => $imagePath,
             'description' => $request->description,
         ]);
 
