@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,12 +23,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //rute penerbangan index
-Route::get('penerbangan',
-    [App\Http\Controllers\PenerbanganController::class, 'index'])->name('penerbangan.index');
+Route::get('penerbangan', [App\Http\Controllers\PenerbanganController::class, 'index'])->name('penerbangan.index');
 
 //rute penerbangan create
-Route::get('penerbangan/create',
-    [App\Http\Controllers\PenerbanganController::class, 'create'])->name('penerbangan.create');
+Route::get('penerbangan/create', [App\Http\Controllers\PenerbanganController::class, 'create'])->name('penerbangan.create');
 
 //rute penerbangan store
 Route::post('penerbangan',
